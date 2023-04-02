@@ -14,7 +14,7 @@ These are all the DIV ID's you're gonna need access to 👇
 #4 ID 👉 'perPersonTotal' = Total dollar value owed per person
 */
 
-// Get global access to all inputs / divs here (you'll need them later 😘)
+// Get global access to all inputs / divs here (you'll need them later)
 // bill input, tip input, number of people div, and per person total div
 
 const billInput = document.getElementById('billTotalInput')
@@ -52,12 +52,10 @@ const decreasePeople = () => {
   // if amount is 1 or less simply return
   // (a.k.a you can't decrease the number of people to 0 or negative!)
   if (numberOfPeople<=1) {
-    return
-    
+    return  
   }
   numberOfPeople -= 1
   //Update the DOM
   numberOfPeopleDiv.innerText = numberOfPeople
   calculateBill()
-
 }
